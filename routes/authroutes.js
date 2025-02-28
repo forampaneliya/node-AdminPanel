@@ -14,8 +14,8 @@ authRoutes.get("/", (req, res) => {
     }
 })
 authRoutes.get("/dashboard", async (req, res) => {
-    if (req.cookies == undefined || req.cookies.admin == undefined || req.cookies.admin._id == undefined) {
-        return res.render("/")
+    if (req.cookies == undefined || req.cookies.admin == undefined ) {
+        return res.redirect("/")
     }
     else {
         let loginAdmin = await Admin.findById(req.cookies.admin._id)
