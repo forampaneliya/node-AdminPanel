@@ -1,6 +1,6 @@
 const mongoose=require("mongoose")
  const dbconnect=()=>{
-    mongoose.connect("mongodb://localhost:27017/adminpanel")
+    mongoose.connect("mongodb+srv://forampaneliya1204:foram1204%40%23@cluster0.alafd.mongodb.net/Admin-panel")
     .then(()=>{
         console.log("db connected!!");
         
